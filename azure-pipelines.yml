@@ -20,5 +20,8 @@ steps:
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       goals: 'package'
-    script:
-      mvn clean package
+  - script: |
+      echo Starting the build
+      mvn package
+      mvn build
+    displayName: 'Build with Maven'
