@@ -32,7 +32,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-            <scope></scope>
         </dependency>
     </dependencies>
     <build>
@@ -74,7 +73,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <outputDirectory>lib</outputDirectory>
+                    <outputDirectory>src/lib</outputDirectory>
                 </configuration>
             </plugin>
 
