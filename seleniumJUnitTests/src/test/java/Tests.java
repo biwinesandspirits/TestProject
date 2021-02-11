@@ -18,10 +18,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-
 public class Tests {
     @BeforeClass
     public static void bclass() {
@@ -45,7 +41,6 @@ public class Tests {
         System.out.println("This is Display Method");
 
         WebDriver driver = null;
-        WebDriverManager.getInstance(CHROME).setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         options.addArguments("enable-automation");
@@ -77,7 +72,6 @@ public class Tests {
         System.out.println("This is test 3");
 
         WebDriver driver = null;
-        WebDriverManager.getInstance(CHROME).setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         options.addArguments("enable-automation");
