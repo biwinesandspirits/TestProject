@@ -39,18 +39,7 @@ public class Tests {
     @Test
     public void display() {
         System.out.println("This is Display Method");
-
-        WebDriver driver = null;
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
-        options.addArguments("enable-automation");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-infobars");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-browser-side-navigation");
-        options.addArguments("--disable-gpu");
-        driver = new ChromeDriver(options);
-
+        WebDriver driver = new ChromeDriver();
         driver.get("https://uat.bordeauxindex.com/fine-wine/red-bordeaux/margaux/palmer-2016");
         System.out.println(driver.getTitle());
         assertEquals(driver.getTitle(), "2016 Palmer");
@@ -70,18 +59,7 @@ public class Tests {
     @Test
     public void test3() {
         System.out.println("This is test 3");
-
-        WebDriver driver = null;
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
-        options.addArguments("enable-automation");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-infobars");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--disable-browser-side-navigation");
-        options.addArguments("--disable-gpu");
-        driver = new ChromeDriver(options);
-
+        WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
         assertEquals(driver.getTitle(), "Google");
