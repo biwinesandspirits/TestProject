@@ -13,16 +13,14 @@
         </dependency>
     </dependencies>
     <build>
-        <sourceDirectory>src</sourceDirectory>
+        <sourceDirectory>./src</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
-                    <release>13</release>
                     <source>11</source>
-                    <target>1.11</target>
+                    <target>11</target>
                 </configuration>
             </plugin>
         </plugins>
