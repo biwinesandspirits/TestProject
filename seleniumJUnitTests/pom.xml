@@ -36,24 +36,7 @@
     </dependencies>
     <build>
         <finalName>turlututu-1</finalName>
-        <sourceDirectory>src</sourceDirectory>
-        <testSourceDirectory>src/testing</testSourceDirectory>
-        <resources>
-            <resource>
-                <directory>src</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-        </resources>
-        <testResources>
-            <testResource>
-                <directory>src/testing</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </testResource>
-        </testResources>
+        <sourceDirectory>src/test/java/tests.java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
