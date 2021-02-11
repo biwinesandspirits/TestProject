@@ -19,72 +19,62 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-
 public class ClassA {
 
-	
-	@BeforeClass
-	public static void bclass()
-	{
-		System.out.println("Before Class");
-	}
-	
-	@AfterClass
-	public static void aclass()
-	{
-		System.out.println("Before Class");
-	}
-	
-	
-	
-	
-	@AfterEach
-	public void after()
-	{
-		System.out.println("This is after Annotation");
-	}
 
-	
-	@Test
-	public void display()
-	{
-		System.out.println("This is Display Method");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://uat.bordeauxindex.com/fine-wine/red-bordeaux/margaux/palmer-2016");
-		System.out.println(driver.getTitle());
-		assertEquals(driver.getTitle(), "2016 Palmer");
-		driver.close();
+    @BeforeClass
+    public static void bclass() {
+        System.out.println("Before Class");
+    }
 
-	}
-	
-	
-	@Test
-	@Ignore
-	public void test2()
-	{
-		System.out.println("This is test 2");
+    @AfterClass
+    public static void aclass() {
+        System.out.println("Before Class");
+    }
 
-	}
-	
-	
-	@Test
-	public void test3()
-	{
-		System.out.println("This is test 3");
-		System.out.println("This is Display Method");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.google.com");
-		System.out.println(driver.getTitle());
-		assertEquals(driver.getTitle(), "Google");
-		driver.close();
 
-	}
-	
-	
-	@BeforeEach
-	public void testing()
-	{
-		System.out.println("This is before Annotation");
-	}
+    @AfterEach
+    public void after() {
+        System.out.println("This is after Annotation");
+    }
+
+
+    @Test
+    public void display() {
+        System.out.println("This is Display Method");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://uat.bordeauxindex.com/fine-wine/red-bordeaux/margaux/palmer-2016");
+        System.out.println(driver.getTitle());
+        assertEquals(driver.getTitle(), "2016 Palmer");
+        driver.close();
+
+    }
+
+
+    @Test
+    @Ignore
+    public void test2() {
+        System.out.println("This is test 2");
+
+    }
+
+
+    @Test
+    public void test3() {
+        System.out.println("This is test 3");
+        System.out.println("This is Display Method");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com");
+        System.out.println(driver.getTitle());
+        assertEquals(driver.getTitle(), "Google");
+        driver.close();
+
+    }
+
+
+    @BeforeEach
+    public void testing() {
+        System.out.println("This is before Annotation");
+    }
 
 }
