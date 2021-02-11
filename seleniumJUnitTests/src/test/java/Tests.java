@@ -20,9 +20,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 public class Tests {
-
-    private webDriver driver = new ChromeDriver();
-
     @BeforeClass
     public static void bclass() {
         System.out.println("Before Class");
@@ -43,7 +40,7 @@ public class Tests {
     @Test
     public void display() {
         System.out.println("This is Display Method");
-       // WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://uat.bordeauxindex.com/fine-wine/red-bordeaux/margaux/palmer-2016");
         System.out.println(driver.getTitle());
         assertEquals(driver.getTitle(), "2016 Palmer");
@@ -63,13 +60,11 @@ public class Tests {
     @Test
     public void test3() {
         System.out.println("This is test 3");
-        System.out.println("This is Display Method");
-        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
         System.out.println(driver.getTitle());
         assertEquals(driver.getTitle(), "Google");
         driver.close();
-
     }
 
 
